@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: votacao_web
+    ports:
+      - "8080:80"  # Mapeia a porta 80 do contêiner para a porta 8080 do host
+    depends_on:
+      - db
+    volumes:
+      - ./public:/var/www/html
+      - ./includes:/var/www/html/includes
+      - ./assets:/var/www/html/assets
+    networks:
+      - votacao_net
+
+  db:
+    image: mysql:8.0
+    container_name: votacao_db
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: votacao
+      MYSQL_USER: user
+      MYSQL_PASSWORD: votospass
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - votacao_net
+
+volumes:
+  db_data:
+
+networks:
+  votacao_net:

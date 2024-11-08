@@ -1,0 +1,104 @@
+/* Resetando alguns estilos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo Geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+}
+
+/* Layout dos Candidatos */
+main {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+
+.candidatos {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.candidato {
+    background-color: white;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 45%;
+    max-width: 300px;
+}
+
+.candidato img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.candidato p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+/* Botão de Votação */
+.vote-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.vote-btn:hover {
+    background-color: #218838;
+}
+
+/* Seção de Sucesso */
+#votacao-sucesso {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #d4edda;
+    border-radius: 10px;
+    color: #155724;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .candidatos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .candidato {
+        width: 80%;
+    }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Votação</title>
+    <link rel="stylesheet" href="./../assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Vote no seu Candidato Favorito!</h1>
+    </header>
+    <main>
+        <section class="candidatos">
+            <div class="candidato">
+                <img src="./../assets/images/katyvoto.jpg" alt="Candidato 1">
+                <p><strong>Katy Zacarias | Candidato 1</strong></p>
+                <p>Prometo ser a primeira a promover a tolerância, a escuta ativa e o apoio mútuo. Qualquer 
+                    desentendimento será resolvido com calma, de forma a fortalecer nossa amizade e respeito. 
+                    Essas são as minhas propostas para que nosso grupo continue crescendo como esse espaço 
+                    especial que tanto valorizamos.</p>
+                <button class="vote-btn" onclick="vote('candidato1')">Votar</button>
+            </div>
+            <div class="candidato">
+                <img src="./../assets/images/agnvoto.jpeg" alt="Candidato 2">
+                <p><strong>Agnerio Rui | Candidato 2</strong></p>
+                <p> Conto com o apoio de vocês para juntos fazermos
+                    deste grupo o lugar mais animado e divertido do
+                    WhatsApp.
+                    Votem em mim e prometo memes, piadas e
+                    diversão sem fim!
+                    Vamos juntos fazer história (ou pelo menos boas
+                    lembranças) aqui no nosso grupo!</p>
+                <button class="vote-btn" onclick="vote('candidato2')">Votar</button>
+            </div>
+        </section>
+        <section id="votacao-sucesso" style="display: none;">
+            <h2>Obrigado por votar!</h2>
+            <p>Seu voto foi registrado com sucesso.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Portal de Votação. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="./../assets/js/script.js">
+        
+    </script>
+</body>
+</html>
